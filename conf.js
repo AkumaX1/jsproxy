@@ -13,7 +13,7 @@ jsproxy_config({
   // 节点配置
   node_map: {
     'demo-hk': {
-      label: '演示服务-香港节点',
+      label: 'Demo Service - Hong Kong Node',
       lines: {
         // 主机:权重
         'node-aliyun-hk-1.etherdream.com:8443': 1,
@@ -21,7 +21,7 @@ jsproxy_config({
       }
     },
     'demo-sg': {
-      label: '演示服务-新加坡节点',
+      label: 'Demo Service - Singapore Node',
       lines: {
         'node-aliyun-sg.etherdream.com:8443': 1,
       },
@@ -32,7 +32,7 @@ jsproxy_config({
         [location.host]: 1,
       }
     },
-    // 该节点用于加载大体积的静态资源
+    // This node is used to load large static resources
     'cfworker': {
       label: '',
       hidden: true,
@@ -51,38 +51,38 @@ jsproxy_config({
   },
 
   /**
-   * 默认节点
+   * default node
    */
   node_default: 'mysite',
   // node_default: /jsproxy-demo\.\w+$/.test(location.host) ? 'demo-hk' : 'mysite',
 
   /**
-   * 加速节点
+   * acceleration node
    */
   node_acc: 'cfworker',
 
   /**
-   * 静态资源 CDN 地址
-   * 用于加速 `assets` 目录中的资源访问
+   * Static resource CDN address 
+   * Used to speed up access to resources in the `assets` directory
    */
   // assets_cdn: 'https://cdn.jsdelivr.net/gh/zjcqoo/zjcqoo.github.io@master/assets/',
 
-  // 本地测试时打开，否则访问的是线上的
+  // Open when testing locally, otherwise access is online
   assets_cdn: 'assets/',
 
-  // 首页路径
+  // Home Path
   index_path: 'index_v3.html',
 
-  // 支持 CORS 的站点列表（实验中...）
+  // List of sites that support CORS (experimental...）
   direct_host_list: 'cors_v1.txt',
 
   /**
-   * 自定义注入页面的 HTML
+   * custom injection page HTML
    */
   inject_html: '<!-- custom html -->',
 
   /**
-   * URL 自定义处理（设计中）
+   * URL custom processing（designing）
    */
   url_handler: {
     'https://www.baidu.com/img/baidu_resultlogo@2.png': {
