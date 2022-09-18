@@ -4,18 +4,18 @@ jsproxy_config({
   // 默认每隔 5 分钟自动下载配置，若想立即验证，可通过隐私模式访问。
   ver: '110',
 
-  // 通过 CDN 加速常用网站的静态资源（实验中）
+  // Accelerate static resources of popular websites through CDN (experimental)
   static_boost: {
     enable: true,
     ver: 62
   },
 
-  // 节点配置
+  // Node configuration
   node_map: {
     'demo-hk': {
       label: 'Demo Service - Hong Kong Node',
       lines: {
-        // 主机:权重
+        // host:weight
         'node-aliyun-hk-1.etherdream.com:8443': 1,
         'node-aliyun-hk-2.etherdream.com:8443': 2,
       }
@@ -27,7 +27,7 @@ jsproxy_config({
       },
     },
     'mysite': {
-      label: '当前站点',
+      label: 'current site',
       lines: {
         [location.host]: 1,
       }
@@ -40,8 +40,8 @@ jsproxy_config({
         // 收费版（高权重）
         //'node-cfworker-2.etherdream.com': 4,
 
-        // 免费版（低权重，分摊一些成本）
-        // 每个账号每天 10 万次免费请求，但有频率限制
+        // Free version (low weight, share some costs) 
+        // 100,000 free requests per account per day with frequency limit
         //'b.007.workers.dev': 1,
         //'b.hehe.workers.dev': 1,
         //'b.lulu.workers.dev': 1,
